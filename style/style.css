@@ -70,7 +70,7 @@
   main {
     width: 90%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 50px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -103,6 +103,12 @@
   }
   
   /* Article de la recette */
+  article.recette::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
   article.recette header {
     background-color: transparent; /* Annule le fond noir hérité de la règle globale */
     padding: 0;
@@ -136,6 +142,7 @@
     width: 100%;
     display: block;
     height: auto;
+    object-fit: cover;
   }
   
   section.infos {
@@ -163,6 +170,7 @@
   figure img {
     max-width: 100%;
     height: auto;
+    min-height: 200px;
     border-radius: 5px;
   }
   
@@ -195,6 +203,68 @@
     list-style-type: decimal;
     margin-left: 20px;
   }
+
+  /* Colonnes */
+  div.col h3 {
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: #6c829d 5px solid;
+    padding-bottom: 5px;
+  }
+
+  div.col {
+    width: 48%;
+    margin-top: 20px;
+  }
+
+  div.col1 {
+    float: left;
+  }
+
+  div.col2 {
+    float: right;
+  }
+
+  div.ing {
+    text-align: center;
+  }
+
+  div.ing p{
+    border:  lightgray 1px solid;
+    padding: 8px 0;
+    margin: 4px 0 ;
+  }
+
+  /* Préparation */
+  p.numero {
+    background-color: #6c829d;
+    color : white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 4px;
+    box-sizing: border-box;
+    margin: 0 ;
+  }
+
+  td.prep_etape {
+    text-align: left;
+    font-size: 14px;  
+    padding-left: 10px;
+    margin: 5px 0;
+  }
+
+  section.preparation table {
+    color : black;
+    background-color: white;
+  }
+
+  section.preparation table tr {
+    height: 40px;
+  }
   
   /* Pied de page */
   footer {
@@ -220,6 +290,14 @@
     main {
       width: 95%;
       padding: 10px;
+    }
+
+    article.recette {
+      flex-direction: column;
+    }
+  
+    .col {
+      width: 100%;
     }
   }
   
