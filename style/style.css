@@ -288,3 +288,12 @@ footer {
   }
 
 }
+
+/* 🛠️ RESPONSIVE DESIGN - Big screen */
+@media (min-width: 900px) {
+  div.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+}
